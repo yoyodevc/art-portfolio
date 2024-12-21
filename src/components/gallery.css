@@ -1,0 +1,56 @@
+/* Works Section */
+.gallery {
+  padding: 1rem 2rem;
+  background-color: #fdf8f3b8;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Lora", serif;
+  font-size: 2.5rem;
+  color: #191919;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.gallery-card {
+  background: #fdf8f3b8;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-card h3 {
+  padding: 1rem;
+  color: #3d405b;
+  font-size: 1.2rem;
+  background-color: #f4f4f9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .works-grid {
+    grid-template-columns: 1fr; /* Stacks works section items on smaller screens */
+  }
+}

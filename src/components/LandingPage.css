@@ -1,0 +1,429 @@
+/* General Styling */
+.landing-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: #191919;
+  background: linear-gradient(135deg, #a3b18a, #6b8eae); /* Gradient background */
+  overflow: hidden;
+}
+
+.intro {
+  z-index: 10;
+  max-width: 800px;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Heading Styling */
+.landing-page h1 {
+  font-family: "Lora", serif;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: #191919;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Paragraph Styling */
+.landing-page p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* CTA Button Styling */
+.cta-button {
+  background-color: #d3cbb8;
+  color: #191919;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+
+.cta-button:hover {
+  background: #6b8eae;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animated Background Elements */
+.visual-element {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.8;
+  animation-timing-function: linear; /* Ensures smooth movement */
+}
+
+/* Circle Animation */
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(141, 110, 99, 0.9);
+  border-radius: 50%;
+  bottom: 20%;
+  left: 5%;
+  z-index: 2; /* Ensures it appears above the background */
+  animation: moveCircle 10s infinite linear;
+}
+
+/* Duplicate Circle Animation */
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(141, 110, 99, 0.9);
+  border-radius: 50%;
+  bottom: 70%;
+  right: 10%;
+  z-index: 1; /* Lower than the first circle */
+  animation: moveCircle 10s infinite linear;
+}
+
+/* Square Animation */
+.square {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(107, 142, 174, 0.9);
+  bottom: 10%;
+  right: 20%;
+  z-index: 2; /* Ensures it appears above the background */
+  animation: moveSquare 12s infinite linear;
+}
+
+/* Duplicate Square Animation */
+.square-2 {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(107, 142, 174, 0.9);
+  bottom: 50%;
+  left: 20%;
+  z-index: 1; /* Lower than the first square */
+  animation: moveSquare 12s infinite linear;
+}
+
+/* Triangle Animation */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 150px solid rgba(163, 177, 138, 0.9);
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Ensures it appears above the background */
+  animation: moveTriangle 15s infinite linear;
+}
+
+/* Duplicate Triangle Animation */
+.triangle-2 {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 150px solid rgba(163, 177, 138, 0.9);
+  bottom: 10%;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 1; /* Lower than the first triangle */
+  animation: moveTriangle 15s infinite linear;
+}
+
+
+/* Diamond Animation */
+.star {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(220, 112, 65, 0.9);
+  transform: rotate(45deg);
+  bottom: 50%;
+  left: 15%;
+  z-index: 2;
+  animation: moveStar 14s infinite linear;
+}
+
+/* Duplicate Diamond Animation */
+.star-2 {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(220, 112, 65, 0.9);
+  transform: rotate(45deg);
+  bottom: 40%;
+  right: 15%;
+  z-index: 1;
+  animation: moveStar 14s infinite linear;
+}
+
+/* Rectangle Animation */
+.rectangle {
+  width: 250px;
+  height: 120px;
+  background-color: rgba(103, 58, 183, 0.9);
+  bottom: 50%;
+  left: 40%;
+  z-index: 2;
+  animation: moveRectangle 16s infinite linear;
+}
+
+/* Duplicate Rectangle Animation */
+.rectangle-2 {
+  width: 250px;
+  height: 120px;
+  background-color: rgba(103, 58, 183, 0.9);
+  bottom: 20%;
+  right: 40%;
+  z-index: 1;
+  animation: moveRectangle 16s infinite linear;
+}
+
+/* Hexagon Animation */
+.hexagon {
+  width: 180px;
+  height: 180px;
+  background-color: rgba(245, 124, 0, 0.9);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  bottom: 70%;
+  left: 5%;
+  z-index: 2;
+  animation: moveHexagon 18s infinite linear;
+}
+
+/* Duplicate Hexagon Animation */
+.hexagon-2 {
+  width: 180px;
+  height: 180px;
+  background-color: rgba(245, 124, 0, 0.9);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  bottom: 05%;
+  right: 15%;
+  z-index: 1;
+  animation: moveHexagon 18s infinite linear;
+}
+
+/* Keyframes for Continuous Movement */
+@keyframes moveCircle {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(100px, -50px) rotate(90deg);
+  }
+  50% {
+    transform: translate(200px, 0) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(100px, 50px) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes moveSquare {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-150px, 50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-300px, 0) scale(1);
+  }
+  75% {
+    transform: translate(-150px, -50px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes moveTriangle {
+  0% {
+    transform: translate(-50%, 0) scale(1);
+  }
+  25% {
+    transform: translate(-50%, -100px) scale(1.1);
+  }
+  50% {
+    transform: translate(-50%, 0) scale(1);
+  }
+  75% {
+    transform: translate(-50%, 100px) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Large Screen Styling */
+@media (min-width: 1024px) {
+  .landing-page h1 {
+    font-size: 5rem;
+  }
+
+  .landing-page p {
+    font-size: 1.8rem;
+  }
+
+  .cta-button {
+    font-size: 1.4rem;
+    padding: 1.2rem 3.5rem;
+  }
+
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .circle-2 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .square {
+    width: 200px;
+    height: 200px;
+  }
+
+  .square-2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .triangle {
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 200px solid rgba(163, 177, 138, 0.9);
+  }
+
+  .triangle-2 {
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 200px solid rgba(163, 177, 138, 0.9);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .landing-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .landing-page p {
+    font-size: 1.2rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle-2 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .square {
+    width: 80px;
+    height: 80px;
+  }
+
+  .square-2 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .triangle {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid rgba(163, 177, 138, 0.9);
+  }
+
+  .triangle-2 {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid rgba(163, 177, 138, 0.9);
+  }
+}
+
+/* Keyframes for Diamond Animation */
+@keyframes moveStar {
+  0% {
+    transform: translate(0, 0) rotate(45deg);
+  }
+  25% {
+    transform: translate(100px, -50px) rotate(90deg);
+  }
+  50% {
+    transform: translate(200px, 0) rotate(135deg);
+  }
+  75% {
+    transform: translate(100px, 50px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(225deg);
+  }
+}
+
+/* Keyframes for Rectangle Animation */
+@keyframes moveRectangle {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-200px, 50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-400px, 0) scale(1);
+  }
+  75% {
+    transform: translate(-200px, -50px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Keyframes for Hexagon Animation */
+@keyframes moveHexagon {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(150px, -75px) scale(1.1);
+  }
+  50% {
+    transform: translate(300px, 0) scale(1);
+  }
+  75% {
+    transform: translate(150px, 75px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}

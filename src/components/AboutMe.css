@@ -1,0 +1,168 @@
+/* About Me Section */
+.about-me {
+  text-align: center;
+  max-width: 90%; /* Increased max width for larger screens */
+  margin: 6rem auto;
+  padding: 25px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    #fff 60%,
+    #d3cbb8
+  ); /* Soft background gradient */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for a modern look */
+  animation: fadeIn 1s ease-out;
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+  border-radius: 50%;
+  width: 200px; /* Slightly larger for larger screens */
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border: 5px solid #2a9d8f; /* Accent border */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.15); /* More playful zoom effect on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Personal Information */
+.personal-info p {
+  font-size: 1.4rem;
+  margin: 12px 0;
+  color: #3d405b;
+  font-weight: 500;
+  letter-spacing: 0.5px; /* Slight letter spacing for better readability */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.personal-info p:hover {
+  color: #f4a261; /* Bolder accent color on hover */
+  transform: translateY(-3px); /* Playful bounce effect */
+}
+
+/* About Me Paragraph */
+.about-me p {
+  font-size: 1.3rem;
+  color: #333; /* Darker gray for better contrast */
+  line-height: 1.8;
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  padding-top: 15px;
+}
+
+/* Heading */
+.about-me h2 {
+  font-size: 2.8rem; /* Larger for better emphasis */
+  color: #264653; /* Calming accent color */
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
+}
+
+.about-me h2:hover {
+  color: #f4a261; /* Bright accent color on hover */
+  letter-spacing: 2px; /* Slight animation for hover interaction */
+}
+
+/* Download CV Button */
+.download-cv-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #2a9d8f; /* Vibrant greenish-blue */
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.download-cv-button:hover {
+  background-color: #e76f51; /* Playful orange-red hover color */
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Larger Screen Styling */
+@media (min-width: 1024px) {
+  .about-me {
+    padding: 30px;
+    margin: 7rem auto;
+  }
+
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-me h2 {
+    font-size: 3rem;
+  }
+
+  .about-me p {
+    font-size: 1.4rem;
+  }
+
+  .personal-info p {
+    font-size: 1.5rem;
+  }
+
+  .download-cv-button {
+    font-size: 1.3rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-me {
+    margin: 3rem auto;
+    padding: 1.5rem;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-me h2 {
+    font-size: 2rem;
+  }
+
+  .about-me p {
+    font-size: 1.1rem;
+  }
+
+  .personal-info p {
+    font-size: 1.1rem;
+  }
+
+  .download-cv-button {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
